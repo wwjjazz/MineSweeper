@@ -1,0 +1,22 @@
+.minesweeper{
+	width: 300px;
+	margin: 20px auto;
+	padding: 20px;
+	background: #8BC34A;
+	.box{	
+		position: relative;
+		background: pink;
+		div{
+			border: 1px solid #F44336;
+			box-sizing: border-box;
+			width:30px;
+			height:30px;
+			position: absolute;
+			line-height: 30px;
+			text-align: center;
+			&.open{
+				background: red;
+			}
+		}
+	}
+}
