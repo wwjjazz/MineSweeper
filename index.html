@@ -7,12 +7,14 @@
 </head>
 <body>
 <div class="minesweeper">
-	<select>
-		<option>简单</option>
-		<!-- <option>中等</option>
-		<option>困难</option> -->
-	</select>
-	<input type="button" value="开始">
+	<div class="tools">
+		<select>
+			<option>简单</option>
+			<!-- <option>中等</option>
+			<option>困难</option> -->
+		</select>
+		<input type="button" value="开始">
+	</div>
 </div>
 <script type="text/javascript">
 var minesweeper = document.querySelector(".minesweeper");
@@ -74,7 +76,7 @@ function bulei(nub){
 			i--;
 		}else{
 			divs[k].dataset.lei = "true";
-			divs[k].innerHTML = "雷";
+			// divs[k].innerHTML = "雷";
 		}
 	}
 	divs.forEach(function(e,index){
@@ -101,6 +103,12 @@ function clickBack(){
 					}
 				})
 				alert("游戏结束");
+				var r=confirm("是否继续游戏？");
+				if (r==true){
+				  	getBox();
+					bulei(objNum[select.value].lei);
+					clickBack();
+				}
 			}else{
 				var sn = divs.length-1;
 				divs.forEach(function(el){
@@ -118,6 +126,17 @@ function clickBack(){
 							el.innerHTML = "雷";
 						}
 					})
+					var r=confirm("是否继续游戏？");
+					if (r==true){
+					  	getBox();
+						bulei(objNum[select.value].lei);
+						clickBack();
+					}
+					// alert("恭喜排雷成功！")
+					// 
+					// setTimeout(function(){
+					// 	
+					// },2000)
 				}
 			}
 

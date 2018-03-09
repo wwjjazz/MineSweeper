@@ -1,8 +1,11 @@
 .minesweeper {
-  width: 300px;
+  width: 270px;
   margin: 20px auto;
   padding: 20px;
   background: #8BC34A;
+}
+.minesweeper .tools {
+  margin-bottom: 10px;
 }
 .minesweeper .box {
   position: relative;

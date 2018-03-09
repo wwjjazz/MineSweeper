@@ -1,18 +1,22 @@
+@width: 30px;
 .minesweeper{
-	width: 300px;
+	width: 270px;
 	margin: 20px auto;
 	padding: 20px;
 	background: #8BC34A;
+	.tools{
+		margin-bottom:10px;
+	}
 	.box{	
 		position: relative;
 		background: pink;
 		div{
 			border: 1px solid #F44336;
 			box-sizing: border-box;
-			width:30px;
-			height:30px;
+			width:@width;
+			height:@width;
 			position: absolute;
-			line-height: 30px;
+			line-height: @width;
 			text-align: center;
 			&.open{
 				background: red;
